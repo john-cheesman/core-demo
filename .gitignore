@@ -1,0 +1,4 @@
+bin
+obj
+*.min.css
+*.min.js

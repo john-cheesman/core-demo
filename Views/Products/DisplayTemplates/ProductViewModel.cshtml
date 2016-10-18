@@ -1,0 +1,9 @@
+@model CoreDemo.ViewModels.ProductViewModel
+
+<article class="product">
+    <h2>@Html.DisplayFor(m => m.Name)</h2>
+
+    <span>@Html.DisplayFor(m => m.Price, "Currency")</span>
+
+    @Model.Description
+</article>
