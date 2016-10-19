@@ -34,7 +34,6 @@
     "netcoreapp1.0": {
       "imports": [
         "dotnet5.6",
-        "dnxcore50",
         "portable-net45+win8"
       ]
     }
@@ -42,7 +41,8 @@
   "buildOptions": {
     "debugType": "portable",
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "outputName": "CoreDemo"
   },
   "runtimeOptions": {
     "configProperties": {
@@ -56,13 +56,13 @@
       "appsettings.json",
       "web.config"
     ]
-  },
-  "scripts": {
-    "prepublish": [
-      "dotnet bundle"
-    ],
-    "postpublish": [
-      "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
-    ]
   }
+  // "scripts": {
+  //   "prepublish": [
+  //     "dotnet bundle"
+  //   ],
+  //   "postpublish": [
+  //     "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
+  //   ]
+  // }
 }
